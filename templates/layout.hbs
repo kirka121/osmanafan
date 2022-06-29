@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Osman & Afan Construction</title>
+
+    <!-- CSS  -->
+    <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  </head>
+  <body>
+    {{> navbar}}
+    {{~> page}}
+    {{> footer}}
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.materialboxed').materialbox();
+          $('.button-collapse').sideNav();
+      });
+    </script>
+    <script>
+      $('.head-link').click(function(e) {
+        e.preventDefault();
+          
+        var goto = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(goto).offset().top
+        }, 800);
+      });
+    </script>
+  </body>
+</html>
